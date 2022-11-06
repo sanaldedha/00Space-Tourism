@@ -1,0 +1,141 @@
+.destination {
+    min-height: 100vh;
+    background-image: url("/space/assets/destination/background-destination-mobile.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+
+    @include tablet {
+        padding: 8.5rem 0 0;
+        background-image: url("/space/assets/destination/background-destination-tablet.jpg");
+    }
+    
+    @include desktop {
+        background-image: url("/space/assets/destination/background-destination-desktop.jpg");
+    }
+
+    h5 {
+        text-align: center;
+
+        @include tablet {
+            text-align: left;
+            margin: 0 0 0 2rem;
+        }
+
+        @include desktop {
+            margin: 0 0 0 10rem
+        }
+    }
+
+    h2 {
+        @include desktop {
+            margin: 2rem 0 0;
+        }
+    }
+
+    p {
+
+        min-height: 125px;
+
+        @include tablet {
+            min-height: 0;
+            max-width: 572px;
+        }
+
+        @include desktop {
+            margin: 1rem 0;
+            max-width: 450px;
+            min-height: 192px;
+        }
+    }
+
+    main {
+        padding: 88px 0 0;
+
+        @include tablet {
+            padding: 0;
+        }
+
+        @include desktop {
+            margin: 3.25rem 0 0;
+        }
+    }
+
+}
+
+.destination__content {
+
+    @include tablet {
+        padding: 1.75rem 0 0;
+    }
+    
+    @include desktop {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+}
+
+.destination__img {
+    height: auto;
+    width: 52%;
+    max-width: 300px;
+    margin: 2rem 0 1.5rem;
+
+    @include desktop {
+        max-width: 445px;
+    }
+}
+
+.destination__text {
+    @include desktop {
+        text-align: start;
+    }
+}
+
+.destination__btn {
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    padding: .5rem 0;
+    margin: 0 13.5px;
+    border: none;
+
+    @include tablet {
+        margin: 0 1rem;
+    }
+
+    &:hover {
+        box-shadow: 0 2px #D0D6F9;
+    }
+}
+
+.destination__btn--active {
+    border-bottom: 3px solid #fff;
+}
+
+.destination__line {
+    width: 100%;
+    height: 1px;
+    margin: 2rem 0;
+    background-color: #383B4B;
+}
+
+.destination__footer {
+    @include tablet {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    @include desktop {
+        justify-content: flex-start;
+    }
+}
+
+.destination__footnote {
+    margin: 0 0 2rem 0;
+
+    @include desktop {
+        margin: 0 5rem 0 0;
+    }
+
+}

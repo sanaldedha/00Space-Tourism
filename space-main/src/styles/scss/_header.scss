@@ -1,0 +1,39 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include desktop {
+        padding-top: 2.5rem;
+    }
+}
+
+.header__logo {
+    width: 40px;
+    height: 40px;
+    margin: 1.5rem;
+    cursor: pointer;
+
+    @include tablet {
+        height: 48px;
+        width: 48px;
+        margin: 0 0 0 3.5rem;
+    }
+}
+
+.header__line {
+    width: 0;
+    height: 1px;
+    background-color: #383B4B;
+    position: absolute;
+    z-index: 3;
+
+    @include desktop {
+        right: 58%;
+        width: 30.5%;
+    }
+}

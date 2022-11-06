@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    color: #fff;
+    background-color: #0B0D17;
+}
+
+.flexbox {  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-item {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+@mixin tablet {
+    @media (min-width: 768px) { @content; }
+}
+
+@mixin desktop {
+    @media (min-width: 1024px) { @content; }
+}

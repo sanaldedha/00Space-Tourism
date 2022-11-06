@@ -1,0 +1,130 @@
+.technology {
+    min-height: 100vh;
+    background-image: url("/space/assets/technology/background-technology-mobile.jpg");
+    background-size: cover;
+
+    @include tablet {
+        background-image: url("/space/assets/technology/background-technology-tablet.jpg");
+    }
+    
+    @include desktop {
+        background-image: url("/space/assets/technology/background-technology-desktop.jpg");
+    }
+
+    h5 {
+        text-align: center;
+
+        @include tablet {
+            text-align: left;
+            margin: 0 0 0 2rem;
+        }
+
+        @include desktop {
+            margin: 0 0 0 10rem;
+            transform: translateY(-1.5rem);
+        }
+    }
+
+    p {
+        @include desktop {
+            min-height: 256px;
+        }
+    }
+
+    main {
+        padding: 88px 0 0;
+
+        @include tablet {
+            padding: 128px 0 0;
+        }
+
+        @include desktop {
+            padding: 18% 0 0;
+        }
+    }
+}
+
+.technology__content {
+    @include desktop {
+        display: grid;
+        grid-template-columns: 20% 40% 40%;
+        grid-template-areas:
+            "btns-t txt-t img-t";
+    }
+}
+
+.technology__img {
+    width: 100%;
+    min-height: 170px;
+    margin: 2rem 0 0;
+    grid-area: img-t;
+
+    @include tablet {
+        min-height: 310px;
+    }
+
+    @include desktop {
+        max-width: 515px;
+        height: auto;
+        margin: 0 0 0 3.875rem;
+    }
+}
+
+.technology__btn-container {
+    margin: 2rem 0 0;
+    grid-area: btns-t;
+
+    @include tablet {
+        margin: 3.5rem 0 1.25rem;
+    }
+
+    @include desktop {
+        margin: 0 3.5rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        transform: translateY(-1rem);
+    }
+}
+
+.technology__btn {
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgba(255, 255, 255, .17);
+    border-radius: 50%;
+    padding: .5rem;
+    margin: 0 .5rem;
+    color: #fff;
+    background-color: #0B0D17;
+    cursor: pointer;
+
+    &:hover {
+        border: 1px solid #fff;
+    }
+
+    @include tablet {
+        height: 58px;
+        width: 58px;
+        font-size: 1.5rem;
+    }
+
+    @include desktop {
+        height: 80px;
+        width: 80px;
+        margin: 0 0 2rem 0;
+        font-size: 2rem;
+    }
+}
+
+.technology__btn--active {
+    color: #0B0D17;
+    background-color: #fff;
+}
+
+.technology__text {
+    grid-area: txt-t;
+
+    @include desktop {
+        text-align: left;
+    }
+}

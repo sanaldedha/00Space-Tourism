@@ -1,0 +1,133 @@
+.crew {
+    min-height: 100vh;
+    background-image: url("/space/assets/crew/background-crew-mobile.jpg");
+    background-size: cover;
+
+    @include tablet {
+            background-image: url("/space/assets/crew/background-crew-tablet.jpg");
+        }
+    
+    @include desktop {
+        background-image: url("/space/assets/crew/background-crew-desktop.jpg");
+    }
+
+    h5 {
+        text-align: center;
+
+        @include tablet {
+                text-align: left;
+                margin: 0 0 0 2rem;
+            }
+
+        @include desktop {
+            margin: 4.75rem 0 0 10rem;
+        }
+    }
+
+    p {
+
+        @include tablet {
+            min-height: 168px;
+        }
+
+        @include desktop {
+            max-width: 445px;
+            min-height: 160px;
+        }
+    }
+
+    main {
+        padding: 88px 0 0;
+
+        @include tablet {
+            padding: 128px 0 0;
+        }
+    }
+}
+
+.crew__content {
+
+    @include tablet {
+        flex-direction: column-reverse;
+    }
+
+    @include desktop {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        display: grid;
+        grid-template-columns: 57% 43%;
+        grid-template-areas:
+            "txt-c img-c"
+            "btns-c img-c"
+        ;
+    }
+}
+
+.crew__img {
+    width: auto;
+    height: 222px;
+    margin-top: 2rem;
+    grid-area: img-c;
+    
+    @include tablet {
+        height: 572px;
+    }
+
+    @include desktop {
+        height: auto;
+        max-height: 602px;
+    }
+}
+
+.crew__line {
+    width: 327px;
+    height: 1px;
+    background-color: #383B4B;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.crew__btn-container {
+    grid-area: btns-c;
+
+    @include desktop {
+        margin: 0 0 3rem 10rem;
+    }
+}
+
+.crew__btn {
+    // design style is height and width of 10px - 15px but I think that's too small so 20px is used
+    height: 20px;
+    width: 20px;
+    border: none;
+    border-radius: 50%;
+    margin: 2rem 1rem 0 0;
+    cursor: pointer;
+    background-color: #fff;
+    opacity: .17;
+
+    @include desktop {
+        margin: 0 1.5rem 0 0;
+    }
+
+    &:hover {
+        opacity: 1;
+        background-color: #D0D6F9;
+    }
+}
+
+.crew__btn--active {
+    opacity: 1;
+}
+
+.crew__text {
+    grid-area: txt-c;
+
+    @include desktop {
+        margin: 0 0 0 8.5rem;
+        transform: translateY(5rem);
+    }
+}
